@@ -1,0 +1,284 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.page {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+/*------------------------*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav-items {
+  list-style: none;
+}
+
+.nav-items li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-button {
+  background-color: #f9f9f9;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  border: 2px solid #213547;
+}
+
+/*------------------------*/
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.pathway-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.view-pathway-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.view-pathway-button.none {
+  background: #2563eb;
+  color: #fff;
+}
+
+.view-pathway-button.selected {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.view-pathway-button:hover {
+  border: 2px solid #213547;
+}
+
+.stats-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-card p {
+  font-size: 20px;
+}
+
+/*.next-button {
+}
+
+/*------------------------*/
+
+.pathway-container {
+  max-width: 1800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.key {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: #6b7280;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+.key .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.key .complete {
+  background: #22c55e;
+}
+.key .upcoming {
+  background: #9ca3af;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 16px;
+  position: relative;
+}
+
+.marker {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.marker::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #9ca3af;
+  box-shadow: 0 0 0 4px rgba(156, 163, 175, 0.25);
+}
+
+.marker.complete::after {
+  background: #22c55e;
+}
+
+.content {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.stage {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  color: #1f2937;
+  border: none;
+  padding: 8px 0 10px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: left;
+}
+.stage-title {
+  font-weight: 600;
+}
+
+.items {
+  margin: 8px 0 4px;
+  list-style: none;
+  padding: 0;
+  border-top: 1px dashed #e5e7eb;
+  transition: max-height 260ms ease, opacity 220ms ease;
+  overflow: hidden;
+}
+.items.hide {
+  max-height: 0;
+}
+.items.show {
+  max-height: 480px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+}
+.item + .item {
+  border-top: 1px dashed #e5e7eb;
+}
+.item-label {
+  color: blue;
+  font-weight: 500;
+}
+.item-details {
+  color: #737e94;
+}
+
+.mark-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.mark-button.done {
+  background: #0078d4;
+  color: #fff;
+}
+
+.mark-button.undo {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+/*.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.nav {
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  color: #1f2937;
+  cursor: pointer;
+}
+.nav.primary {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+}
+.nav.secondary {
+  opacity: 0.9;
+}
+.nav:hover {
+  filter: brightness(1.05);
+}
+*/
