@@ -44,7 +44,7 @@ function PathwaysPage() {
               <h2>{pway.title}</h2>
               <p>{pway.description}</p>
               <button
-                className={`view-pathway-button ${
+                className={`select-pathway-button ${
                   pway.title.replace(/ /g, "_") === pathway
                     ? "selected"
                     : "none"
