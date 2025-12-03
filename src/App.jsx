@@ -10,7 +10,7 @@ import Dashboard from "./components/Dashboard";
 import Profile from "./components/Profile";
 
 function App() {
-  const [page, setPage] = useState("pathways");
+  const [page, setPage] = useState("Pathways");
   const [pathway, setPathway] = useState();
   const [pathwayArrData, setPathwayArrData] = useState({
     Backend_Developer: [],
@@ -46,9 +46,9 @@ function App() {
             <Navbar />
           </div>
           <div className="main">
-            {(page === "pathways" && <PathwaysPage />) ||
-              (page === "dashboard" && <Dashboard />) ||
-              (page === "profile" && <Profile />)}
+            {(page === "Dashboard" && <Dashboard />) ||
+              (page === "Pathways" && <PathwaysPage />) ||
+              (page === "Profile" && <Profile />)}
           </div>
         </PageContext.Provider>
       </PathwayContext.Provider>
