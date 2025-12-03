@@ -89,12 +89,3 @@ function Dashboard() {
 
 export default Dashboard;
 
-/*
-          <header className="dashboard-header">
-            <p>Here's your current learning progress and goals.</p>
-          </header>
-          <section className="current-pathway">
-            <h2>Current Pathway</h2>
-          </section>
-         
-*/
