@@ -21,7 +21,6 @@ function Dashboard() {
     );
 
   if (moduleProgress === 100) {
-    console.log("module complete");
     achievements.push(`Completed the ${pathway.replace(/_/g, " ")} pathway!`);
     nextStage = "All stages completed";
   } else if (pathway) {
