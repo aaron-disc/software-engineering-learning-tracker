@@ -110,8 +110,17 @@
   font-size: 20px;
 }
 
-/*.next-button {
+.next-button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
 }
+
 
 /*------------------------*/
 

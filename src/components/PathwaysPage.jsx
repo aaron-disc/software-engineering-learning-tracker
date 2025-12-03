@@ -30,8 +30,11 @@ function PathwaysPage() {
   const { setPathway, pathway } = useContext(PathwayContext);
 
   return (
-    <>
-      <div className="page">
+    <div className="page">
+      <div className="pathway-card">
+        {pathway && <Pathway selectedPathway={pathway} />}
+      </div>
+      <div>
         <header className="header">
           <h1>Choose Your Learning Pathway</h1>
         </header>
@@ -54,10 +57,7 @@ function PathwaysPage() {
           ))}
         </div>
       </div>
-      <div className="pathway-card">
-        {pathway && <Pathway selectedPathway={pathway} />}
-      </div>
-    </>
+    </div>
   );
 }
 
