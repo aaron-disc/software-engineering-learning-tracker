@@ -34,10 +34,11 @@ function Dashboard() {
   return (
     <div className="page" style={{ padding: "2rem 5rem" }}>
       <>
+        <header className="dashboard-header"></header>
         <div className="stats-grid">
           <div className="stat-card first-column">
-            <h1>Current pathway</h1>
-            <h2>
+            <h2>Current pathway:</h2>
+            <h1>
               {pathway ? (
                 pathway.replace(/_/g, " ")
               ) : (
@@ -48,8 +49,26 @@ function Dashboard() {
                   Explore Pathways →
                 </button>
               )}
-            </h2>
+            </h1>
           </div>
+          <div className="stat-card wide-element">
+            <h2>Next Stage</h2>
+            <p>{nextStage}</p>
+            <p>
+              {pathway
+                ? nextStage !== "All stages completed" &&
+                  pathway.replace(/_/g, " ")
+                : "some text"}
+            </p>
+          </div>
+          <div className="stat-card">
+            <h2>Module Progress</h2>
+            <h1>{moduleProgress}%</h1>
+            <p></p>
+          </div>
+          <div className="stat-card">
+            <h2>streak or smth</h2> <h1>3</h1>
+          </div>{" "}
           <div className="stat-card wide-element">
             <h2>Achievements</h2>
             {achievements.length > 0 ? (
@@ -62,25 +81,6 @@ function Dashboard() {
               <p>No achievements yet. Keep going!</p>
             )}
           </div>
-          <div className="stat-card tall-element">
-            <h2>Module Progress</h2>
-            <h1>{moduleProgress}%</h1>
-            <p></p>
-          </div>
-          <div className="stat-card">
-            <h2>Next Stage</h2>
-            <p>{nextStage}</p>
-            <p>
-              {pathway
-                ? nextStage !== "All stages completed" &&
-                  pathway.replace(/_/g, " ")
-                : "some text"}
-            </p>
-          </div>
-
-          <div className="stat-card">
-            <h2>streak or smth</h2> <p>3</p>
-          </div>
         </div>
       </>
     </div>
@@ -88,4 +88,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
