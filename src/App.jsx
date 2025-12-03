@@ -33,13 +33,6 @@ function App() {
     });
   }
 
-  const currentDate = new Date();
-  const currentFullDate = `${currentDate.getDate()}/${
-    currentDate.getMonth() + 1
-  }/${currentDate.getFullYear()}`;
-
-  console.log(currentFullDate);
-
   return (
     <PathwayDataContext.Provider
       value={{

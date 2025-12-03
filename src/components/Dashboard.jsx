@@ -41,9 +41,6 @@ function Dashboard() {
           </header>
           <section className="current-pathway">
             <h2>Current Pathway</h2>
-            <div className="pathway-card">
-              <Pathway selectedPathway={pathway} />
-            </div>
           </section>
           <div className="stats-grid">
             <div className="stat-card">

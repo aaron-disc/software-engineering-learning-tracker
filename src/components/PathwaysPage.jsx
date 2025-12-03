@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 
 import PathwayContext from "../store/PathwayContext";
+import Pathway from "./Pathway";
 
 const dummyPathways = [
   {
@@ -33,9 +34,7 @@ function PathwaysPage() {
       <div className="page">
         <header className="header">
           <h1>Choose Your Learning Pathway</h1>
-          <p>View your selected pathway in the personal dashboard</p>
         </header>
-
         <div className="pathway-grid">
           {dummyPathways.map((pway, index) => (
             <div key={index} className="pathway-card">
@@ -54,6 +53,9 @@ function PathwaysPage() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="pathway-card">
+        {pathway && <Pathway selectedPathway={pathway} />}
       </div>
     </>
   );
