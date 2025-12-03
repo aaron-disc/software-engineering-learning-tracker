@@ -1,6 +1,6 @@
 import NavbarButton from "./Navbar-button";
 
-export default function Navbar() {
+function Navbar() {
   return (
     <div className="navbar">
       <h1>Software Engineering Learning Tracker </h1>
@@ -14,3 +14,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default Navbar;
