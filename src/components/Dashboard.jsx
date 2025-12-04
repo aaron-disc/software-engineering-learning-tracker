@@ -63,7 +63,7 @@ function Dashboard() {
                   <ul className="stat-card-list">
                     {achievements.map((achievement, index) => (
                       <li key={index}>
-                        <strong>{achievement}</strong>
+                        <p style={{ fontSize: "18px" }}>{achievement}</p>
                       </li>
                     ))}
                   </ul>
@@ -92,7 +92,7 @@ function Dashboard() {
               </div>
               <div className="stat-card wide-element">
                 <h2>Next Stage</h2>
-                <h2>{nextStage}</h2>
+                <h1>{nextStage}</h1>
               </div>
             </>
           )}
