@@ -15,7 +15,6 @@ function Pathway({ selectedPathway }) {
         <span className="dot complete" /> Complete
         <span className="dot upcoming" /> Upcoming
       </div>
-
       <ol className="timeline">
         {pathway.map((stage, i) => {
           const completedStages = pathwayArrData[selectedPathway];
@@ -38,7 +37,6 @@ function Pathway({ selectedPathway }) {
                 >
                   <span className="stage-title">{stage.title}</span>
                 </button>
-
                 <ul className={`items ${openIndex === i ? "show" : "hide"}`}>
                   {stage.items.map((item) => (
                     <li key={item.label} className="item">
@@ -51,7 +49,9 @@ function Pathway({ selectedPathway }) {
                 </ul>
                 <button
                   className={`mark-button ${isComplete ? "undo" : "done"}`}
-                  onClick={() => setPathwayArrData(i)}
+                  onClick={() =>
+                    setPathwayArrData(selectedPathway, i, stage.title)
+                  }
                 >
                   {isComplete ? "Undo Complete" : "Mark Complete"}
                 </button>
