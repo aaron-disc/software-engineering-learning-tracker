@@ -27,7 +27,7 @@ export function PathwayDataProvider({ children }) {
     if (!currentState.includes(index)) {
       setAchievements((prev) => {
         const newAchievements = [
-          `Completed - ${stageTitle} in  ${pathway.replace(/_/g, " ")}`,
+          `Completed - ${stageTitle} in ${pathway.replace(/_/g, " ")}`,
           ...prev,
         ];
         return newAchievements.slice(0, 3);
@@ -37,7 +37,7 @@ export function PathwayDataProvider({ children }) {
         prev.filter(
           (ach) =>
             ach !==
-            `Completed stage: ${stageTitle} in ${pathway.replace(/_/g, " ")}`
+            `Completed - ${stageTitle} in ${pathway.replace(/_/g, " ")}`
         )
       );
     }
