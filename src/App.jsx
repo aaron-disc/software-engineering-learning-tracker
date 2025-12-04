@@ -1,5 +1,6 @@
-import { useContext } from "react";
 import "./styles.css";
+
+import { useContext } from "react";
 
 import Navbar from "./components/Navbar";
 import PathwaysPage from "./components/PathwaysPage";

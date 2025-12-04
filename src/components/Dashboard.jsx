@@ -38,7 +38,6 @@ function Dashboard() {
         <header className="dashboard-header">
           <h1>Learning Dashboard</h1>
         </header>
-
         <div className="stats-grid">
           <div className="stat-card first-column">
             <h2>{pathway ? "Current pathway:" : "Select a pathway"}</h2>
@@ -84,7 +83,6 @@ function Dashboard() {
                   {stagesCompleted} / {totalStages} stages completed
                 </p>
               </div>
-
               <div className="stat-card">
                 <h2>Study Streak</h2>
                 <h1>3</h1>
