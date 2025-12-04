@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import PathwayContext from "../store/PathwayContext";
 import Pathway from "./Pathway";
@@ -28,35 +28,33 @@ const dummyPathways = [
 
 function PathwaysPage() {
   const { setPathway, pathway } = useContext(PathwayContext);
-
   return (
-    <div className="page">
-      <div className="pathway-card">
-        {pathway && <Pathway selectedPathway={pathway} />}
-      </div>
-      <div>
-        <header className="header">
-          <h1>Choose Your Learning Pathway</h1>
-        </header>
-        <div className="pathway-grid">
+    <div className="page-layout">
+      <aside className="sidebar">
+        <h2>Choose Your Pathway</h2>
+        <ul className="pathway-list">
           {dummyPathways.map((pway, index) => (
-            <div key={index} className="pathway-card">
-              <h2>{pway.title}</h2>
-              <p>{pway.description}</p>
+            <li key={index}>
               <button
-                className={`select-pathway-button ${
-                  pway.title.replace(/ /g, "_") === pathway
-                    ? "selected"
-                    : "none"
+                className={`sidebar-button ${
+                  pway.title.replace(/ /g, "_") === pathway ? "selected" : ""
                 }`}
                 onClick={() => setPathway(pway.title.replace(/ /g, "_"))}
               >
-                Select Pathway
+                <h2>{pway.title}</h2>
+                <p>{pway.description}</p>
               </button>
-            </div>
+            </li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </aside>
+      <main className="main-content">
+        {pathway ? (
+          <Pathway selectedPathway={pathway} />
+        ) : (
+          <p>Please select a pathway from the sidebar.</p>
+        )}
+      </main>
     </div>
   );
 }
